@@ -1,4 +1,4 @@
-module go-testng-report
+module github.com/Hawaiyon/go-testng-report
 
 go 1.17
 

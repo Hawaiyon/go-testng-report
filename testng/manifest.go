@@ -2,9 +2,10 @@ package testng
 
 import (
 	"encoding/xml"
-	"go-testng-report/json"
-	"go-testng-report/properties"
 	"strings"
+
+	"github.com/Hawaiyon/go-testng-report/json"
+	"github.com/Hawaiyon/go-testng-report/properties"
 )
 
 const defaultGroupName = "UT"

@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/xml"
 	"fmt"
-	"go-testng-report/json"
-	"go-testng-report/properties"
-	"go-testng-report/testng"
-	"go-testng-report/utils"
 	"io/ioutil"
 	"time"
+
+	"github.com/Hawaiyon/go-testng-report/json"
+	"github.com/Hawaiyon/go-testng-report/properties"
+	"github.com/Hawaiyon/go-testng-report/testng"
+	"github.com/Hawaiyon/go-testng-report/utils"
 )
 
 func GenerateReport(jsonFile string, groupsFile string, reportFile string) error {
@@ -50,7 +51,7 @@ func ToTestNGReport(goReport []json.Report, groups *properties.Properties) testn
 			report.Suite.Test.StartedAt = report.Suite.StartedAt
 			report.Suite.Test.Name = "golang test"
 		}
-		if i == len(goReport) - 1 {
+		if i == len(goReport)-1 {
 			started, err := time.Parse(time.RFC3339Nano, report.Suite.StartedAt)
 			if err != nil {
 				fmt.Println("failed to parse started time", err)
